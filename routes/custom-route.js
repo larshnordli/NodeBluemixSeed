@@ -17,8 +17,8 @@ router.post('/' + route, function(req, res, next) {
   var reqBody = req.body;
 
   var data = {
-    "action": "POST",
-    "status": "Successfully posted"
+    action: 'POST',
+    status: 'Successfully posted'
   };
 
   res.status(200).json(data);
@@ -31,8 +31,8 @@ router.get('/' + route, function(req, res, next) {
   var reqBody = req.body;
 
   var data = {
-    "action": "GET",
-    "status": "Successfully gotten"
+    action: 'GET',
+    status: 'Successfully gotten'
   };
 
   res.status(200).json(data);
@@ -45,8 +45,8 @@ router.put('/' + route, function(req, res, next) {
   var reqBody = req.body;
 
   var data = {
-    "action": "PUT",
-    "status": "Successfully put"
+    action: 'PUT',
+    status: 'Successfully put'
   };
 
   res.status(200).json(data);
@@ -59,8 +59,8 @@ router.delete('/' + route, function(req, res, next) {
   var reqBody = req.body;
 
   var data = {
-    "action": "DELETE",
-    "status": "Successfully deleted"
+    action: 'DELETE',
+    status: 'Successfully deleted'
   };
 
   res.status(200).json(data);
