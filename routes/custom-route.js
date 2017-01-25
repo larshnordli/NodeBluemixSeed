@@ -1,17 +1,24 @@
 // custom-route.js
 // Route to do custom stuff
-
 // Reached on /api/custom-route
-var route = '/api/custom-route';
 
-//Change variable name and model file name to reflect the Watson Service
-var WatsonService = require('../models/custom-model');
+//* Commented due to runtime error. Uncomment when connected to service
+//* Change variable name and model file name to reflect the Watson Service
+
+//var WatsonService = require('../models/custom-model');
+
+// Remove this when connected to Watson Service
+var WatsonService = {
+  apiFunction : function(){
+                  return "Hello World from Service";
+                }
+};
 
 var express = require('express');
 var router = express.Router();
 
 //POST something
-router.post('/' + route, function(req, res, next) {
+router.post('/', function(req, res, next) {
   var action = WatsonService.apiFunction();
 
   var reqBody = req.body;
@@ -25,7 +32,7 @@ router.post('/' + route, function(req, res, next) {
 });
 
 //GET something
-router.get('/' + route, function(req, res, next) {
+router.get('/', function(req, res, next) {
   var action = WatsonService.apiFunction();
 
   var reqBody = req.body;
@@ -39,7 +46,7 @@ router.get('/' + route, function(req, res, next) {
 });
 
 //PUT something
-router.put('/' + route, function(req, res, next) {
+router.put('/', function(req, res, next) {
   var action = WatsonService.apiFunction();
 
   var reqBody = req.body;
@@ -53,7 +60,7 @@ router.put('/' + route, function(req, res, next) {
 });
 
 //DELETE something
-router.delete('/' + route, function(req, res, next) {
+router.delete('/', function(req, res, next) {
   var action = WatsonService.apiFunction();
 
   var reqBody = req.body;

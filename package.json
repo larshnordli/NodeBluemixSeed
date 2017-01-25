@@ -11,7 +11,9 @@
     "cors": "^2.8.1",
     "express": "4.13.x",
     "jade": "^1.11.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "q": "^1.4.1",
+    "watson-developer-cloud": "^2.15.2"
   },
   "repository": {},
   "engines": {
