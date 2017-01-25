@@ -1,3 +1,6 @@
+//Change the name of your server here
+var serverName = "Node Backend";
+
 // This application uses express as its web server
 // for more info, see: http://expressjs.com
 var express = require('express');
@@ -35,7 +38,7 @@ app.use('/api/custom-route', customRoute);
 // start server on the specified port and binding host
 app.listen(appEnv.port, '0.0.0.0', function() {
   // print a message when the server starts listening
-  console.log("Node Backend starting on " + appEnv.url);
+  console.log(serverName + " starting on " + appEnv.url);
 });
 
 // catch 404 and forward to error handler
