@@ -22,8 +22,12 @@ var routes = require('./routes/index');
 var cors = require('cors');
 app.use(cors());
 
-// view engine setup
+// Body parser and JSON formatting
 var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+// parse application/json
+app.use(bodyParser.json());
+
 var path = require('path');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
